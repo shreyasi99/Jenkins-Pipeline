@@ -12,16 +12,7 @@ pipeline {
             steps {
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/shreyasi99/Jenkins-Pipeline.git']]])
             }
-        }
-        
-        // here we build the maven project and generated jar file , with the help of this file generated docker image
-        stage('Build') { 
-             
-            steps {
-              withMaven(maven: 'maven3'){dir ('simple-java-maven-app-master'){ sh 'mvn -B -DskipTests clean package' }}
-            } 
-         
-        }
+     }
    
 
   
