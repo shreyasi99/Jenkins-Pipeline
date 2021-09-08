@@ -20,7 +20,7 @@ pipeline {
     
         stage('build') {
             steps {
-                echo "Hello World!"
+                echo "Demo on github Webhooks!"
         }
       }
        stage('Logging into AWS ECR') {
